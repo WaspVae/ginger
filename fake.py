@@ -1,9 +1,3 @@
-"""
- Created by 七月 on 2018/5/1.
-"""
-__author__ = '七月'
-
-
 from app import create_app
 from app.models.base import db
 from app.models.user import User

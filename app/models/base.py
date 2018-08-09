@@ -20,8 +20,7 @@ class SQLAlchemy(_SQLAlchemy):
 
 class Query(BaseQuery):
     def filter_by(self, **kwargs):
-        if 'status' not in kwargs.keys():
-            kwargs['status'] = 1
+        kwargs.setdefault('status', 1)
         return super(Query, self).filter_by(**kwargs)
 
     def get_or_404(self, ident):
